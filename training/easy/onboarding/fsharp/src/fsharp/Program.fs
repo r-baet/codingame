@@ -1,4 +1,5 @@
 ﻿open System
+open OutputGenerator
 
 (* game loop *)
 while true do
@@ -10,8 +11,8 @@ while true do
     (* Write an action using printfn *)
     
     (* Enter the code here *)
+    let output = OutputGenerator.generate enemy1 dist1 enemy2 dist2
 
-    if dist1 < dist2 then printfn "%s" enemy1
-    else printfn "%s" enemy2
+    printfn "%s" output
     
     ()

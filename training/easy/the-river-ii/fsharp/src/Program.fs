@@ -1,2 +1,7 @@
-﻿// For more information see https://aka.ms/fsharp-console-apps
-printfn "Hello from F#"
+﻿open System
+
+let r1 = int(Console.In.ReadLine())
+
+let output = OutputGenerator.generate r1
+
+printfn "%s" output

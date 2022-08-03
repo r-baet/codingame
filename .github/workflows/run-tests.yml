@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: for s in $(find . -name *.sln); do echo "$s" && dotnet restore $s; done
+      run: for s in $(find . -name *.sln); do dotnet restore "$s"; done
     - name: Build
-      run: for s in $(find . -name *.sln); do dotnet build $s --no-restore; done
+      run: for s in $(find . -name *.sln); do dotnet build "$s" --no-restore; done
     - name: Test
-      run: for s in $(find . -name *.sln); do dotnet test $s --no-build --verbosity normal; done
+      run: for s in $(find . -name *.sln); do dotnet test "$s" --no-build --verbosity normal; done

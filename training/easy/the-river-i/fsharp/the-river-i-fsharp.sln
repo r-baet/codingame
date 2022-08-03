@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{15F2957A-0354-453B-BB5E-E949C5436435}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "fsharp", "src\fsharp.fsproj", "{64BB65BA-70EE-48C4-976A-3A8B2B68BFAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A60587FE-DEF0-4C7E-95C8-8A2BAB868766}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fsharp.tests", "test\fsharp.tests.csproj", "{93D4351E-456F-489C-966D-8DF0A3DF98F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64BB65BA-70EE-48C4-976A-3A8B2B68BFAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64BB65BA-70EE-48C4-976A-3A8B2B68BFAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64BB65BA-70EE-48C4-976A-3A8B2B68BFAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64BB65BA-70EE-48C4-976A-3A8B2B68BFAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93D4351E-456F-489C-966D-8DF0A3DF98F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93D4351E-456F-489C-966D-8DF0A3DF98F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93D4351E-456F-489C-966D-8DF0A3DF98F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93D4351E-456F-489C-966D-8DF0A3DF98F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{64BB65BA-70EE-48C4-976A-3A8B2B68BFAA} = {15F2957A-0354-453B-BB5E-E949C5436435}
+		{93D4351E-456F-489C-966D-8DF0A3DF98F2} = {A60587FE-DEF0-4C7E-95C8-8A2BAB868766}
+	EndGlobalSection
+EndGlobal

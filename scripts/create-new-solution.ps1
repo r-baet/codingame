@@ -41,4 +41,9 @@ if ($TestProject -eq $true) {
     New-Item -ItemType "directory" -Name "test" -Path $SolutionDirectory
     dotnet new xunit --name "$LanguageFriendly.tests" --language "C#" --output "$SolutionDirectory\test"
     dotnet sln "$SolutionDirectory\$ProjectName-$LanguageFriendly.sln" add "$SolutionDirectory\test\$LanguageFriendly.tests.csproj" -s "test"
+    dotnet add "$SolutionDirectory\test\$LanguageFriendly.tests.csproj" package FluentAssertions
+    dotnet add "$SolutionDirectory\test\$LanguageFriendly.tests.csproj" package Microsoft.NET.Test.Sdk
+    dotnet add "$SolutionDirectory\test\$LanguageFriendly.tests.csproj" package xunit
+    dotnet add "$SolutionDirectory\test\$LanguageFriendly.tests.csproj" package xunit.runner.visualstudio
+    dotnet add "$SolutionDirectory\test\$LanguageFriendly.tests.csproj" package coverlet.collector
 }

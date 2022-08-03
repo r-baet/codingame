@@ -1,3 +1,4 @@
+using FluentAssertions;
 namespace fsharp.tests;
 public class Case_01_ImminentDanger
 {
@@ -14,6 +15,7 @@ public class Case_01_ImminentDanger
         var output = OutputGenerator.generate(enemy1, dist1, enemy2, dist2);
 
         // Asssert
-        Assert.Equal("Rock", output);
+        //Assert.Equal("Rock", output);
+        output.Should().Be("Rock");
     }
 }

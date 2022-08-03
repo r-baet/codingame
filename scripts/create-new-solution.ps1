@@ -46,4 +46,5 @@ if ($TestProject -eq $true) {
     dotnet add "$SolutionDirectory\test\$LanguageFriendly.tests.csproj" package xunit
     dotnet add "$SolutionDirectory\test\$LanguageFriendly.tests.csproj" package xunit.runner.visualstudio
     dotnet add "$SolutionDirectory\test\$LanguageFriendly.tests.csproj" package coverlet.collector
+    dotnet add "$SolutionDirectory\test\$LanguageFriendly.tests.csproj" reference "$SolutionDirectory\src\$LanguageFriendly.$LanguageProjectExtension"
 }

@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: for s in $(find . -name *.sln); do dotnet restore "$s"; done
+      run: for s in $(find . -name *.sln); do echo "$s"; done
     - name: Build
       run: for s in $(find . -name *.sln); do dotnet build "$s" --no-restore; done
     - name: Test

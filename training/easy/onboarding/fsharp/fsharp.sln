@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "fsharp", "src\fsharp\fsharp.fsproj", "{404381D6-8062-480A-B923-1043F2AC3C4F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CA914EB7-54C4-4C26-9B6C-47C3431FB3D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{BBBBA036-05DF-421C-ACCE-113A16DCC841}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "fsharp.tests", "test\fsharp.tests\fsharp.tests.fsproj", "{5C1E89A5-AD25-41A7-9545-515A82416138}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{404381D6-8062-480A-B923-1043F2AC3C4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{404381D6-8062-480A-B923-1043F2AC3C4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{404381D6-8062-480A-B923-1043F2AC3C4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{404381D6-8062-480A-B923-1043F2AC3C4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C1E89A5-AD25-41A7-9545-515A82416138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C1E89A5-AD25-41A7-9545-515A82416138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C1E89A5-AD25-41A7-9545-515A82416138}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C1E89A5-AD25-41A7-9545-515A82416138}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{404381D6-8062-480A-B923-1043F2AC3C4F} = {CA914EB7-54C4-4C26-9B6C-47C3431FB3D2}
+		{5C1E89A5-AD25-41A7-9545-515A82416138} = {BBBBA036-05DF-421C-ACCE-113A16DCC841}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {225044D6-2EF5-4421-B1F7-D45DE64B5285}
+	EndGlobalSection
+EndGlobal

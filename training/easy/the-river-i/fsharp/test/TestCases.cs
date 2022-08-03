@@ -101,4 +101,32 @@ public class TestCases
         // Assert
         output.Should().Be("20014");
     }
+
+    [Fact]
+    public void Case_08_Primes()
+    {
+        // Arrange
+        var river1 = 991;
+        var river2 = 997;
+
+        // Act
+        var output = OutputGenerator.generate(river1, river2);
+
+        // Assert
+        output.Should().Be("1118");
+    }
+
+    [Fact]
+    public void Case_09_EvenBigger()
+    {
+        // Arrange
+        var river1 = 15485863;
+        var river2 = 13000000;
+
+        // Act
+        var output = OutputGenerator.generate(river1, river2);
+
+        // Assert
+        output.Should().Be("15490633");
+    }
 }

@@ -1,8 +1,8 @@
 ﻿module OutputGenerator
 
 let generate (dimensions:string) (board:string[]) =
-    let W = int((dimensions.Split[|' '|]).[0])
-    let H = int((dimensions.Split[|' '|]).[1])
+    let W = dimensions.Split[|' '|] |> Seq.head |> int
+    let H = dimensions.Split[|' '|] |> Seq.last |> int
     let findTopLabels sequence =
         sequence
         |> Seq.head

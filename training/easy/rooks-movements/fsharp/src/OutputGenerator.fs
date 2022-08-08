@@ -1,6 +1,6 @@
 ﻿module OutputGenerator
 
-type ChessPiece = {
+type private ChessPiece = {
     Color: int
     Position: string
 }

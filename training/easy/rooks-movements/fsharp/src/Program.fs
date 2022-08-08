@@ -15,7 +15,4 @@ let otherPieces = Array.init nbPieces (fun ix -> Console.In.ReadLine())
 
 let output = generate rookPosition nbPieces otherPieces
 
-(* Write an action using printfn *)
-(* To debug: eprintfn "Debug message" *)
-
 output |> Array.iter (fun ans -> printfn "%s" ans)

@@ -36,7 +36,7 @@ namespace csharp.tests.Attributes
             }
             if (_directoryName is not null)
             {
-                _fileName = _directoryName + "\\" + _fileName;
+                _fileName = Path.Combine(_directoryName, _fileName);
             }
             using (var csvFile = new StreamReader(_fileName))
             {

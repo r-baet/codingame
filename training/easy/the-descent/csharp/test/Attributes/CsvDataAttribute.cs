@@ -10,25 +10,15 @@ namespace csharp.tests.Attributes
 {
     internal class CsvDataAttribute : DataAttribute
     {
-        private readonly string _fileName;
+        private string? _fileName;
+        private readonly string? _directoryName;
         private readonly char _delimiter;
         private readonly bool _hasHeaders;
 
-        public CsvDataAttribute(string fileName, string? directoryName = null, char delimiter = ';', bool hasHeaders = false)
+        public CsvDataAttribute(string? fileName = null, string? directoryName = null, char delimiter = ';', bool hasHeaders = false)
         {
-            if (fileName is null)
-            {
-                throw new ArgumentNullException(nameof(fileName));
-            }
             _fileName = fileName;
-            if (!fileName.EndsWith(".csv"))
-            {
-                _fileName = _fileName + ".csv";
-            }
-            if (directoryName is not null)
-            {
-                _fileName = directoryName + "\\" + _fileName;
-            }
+            _directoryName = directoryName;
             _delimiter = delimiter;
             _hasHeaders = hasHeaders;            
         }
@@ -36,7 +26,18 @@ namespace csharp.tests.Attributes
         public override IEnumerable<object[]> GetData(MethodInfo testMethod) 
         {
             var parameterTypes = testMethod.GetParameters()?.Select(p => p.ParameterType).ToArray();
-            var result = new List<object[]>();
+            if (_fileName is null)
+            {
+                _fileName = testMethod.Name;
+            }
+            if (!_fileName.EndsWith(".csv"))
+            {
+                _fileName = _fileName + ".csv";
+            }
+            if (_directoryName is not null)
+            {
+                _fileName = _directoryName + "\\" + _fileName;
+            }
             using (var csvFile = new StreamReader(_fileName))
             {
                 if (_hasHeaders)

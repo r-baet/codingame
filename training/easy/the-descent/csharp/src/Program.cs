@@ -6,7 +6,7 @@ while (true)
     var arr = new int[8];
     for (int i = 0; i < 8; i++)
     {
-        int mountainH = int.Parse(Console.ReadLine()); // represents the height of one mountain.
+        int mountainH = int.Parse(Console.ReadLine()!); // represents the height of one mountain.
         arr[i] = mountainH;
     }
 

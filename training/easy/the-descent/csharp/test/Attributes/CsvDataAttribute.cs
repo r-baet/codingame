@@ -10,6 +10,21 @@ namespace csharp.tests.Attributes
 {
     internal class CsvDataAttribute : DataAttribute
     {
-        public override IEnumerable<object[]> GetData(MethodInfo testMethod) => throw new NotImplementedException();
+        public CsvDataAttribute(string fileName, bool hasHeaders = false)
+        {
+            FileName = fileName;
+            HasHeaders = hasHeaders;
+        }
+
+        public string FileName { get; }
+        public bool HasHeaders { get; }
+
+        public override IEnumerable<object[]> GetData(MethodInfo testMethod) 
+        {
+            return new List<object[]>
+            {
+                new object[] { 0, 9, 8, 7, 6, 5, 4, 3, 2 }
+            };
+        }
     }
 }

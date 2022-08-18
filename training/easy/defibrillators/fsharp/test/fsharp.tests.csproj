@@ -27,7 +27,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Inputs\" />
+    <Folder Include="Input\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Input\Case_01_Example.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

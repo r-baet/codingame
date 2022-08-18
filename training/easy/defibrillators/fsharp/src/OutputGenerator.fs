@@ -2,7 +2,7 @@
 
 open System
 
-let generate longitude latitude nrOfDefibrillators (defibrillators : string list) : string =
+let generate longitude latitude nrOfDefibrillators (defibrillators : string[]) : string =
     let toRadians (s: string) : float =
         s.Replace (",", ".")
         |> float
@@ -17,8 +17,8 @@ let generate longitude latitude nrOfDefibrillators (defibrillators : string list
         Math.Sqrt(x * x + y * y) * 6371.0
         |> string
     defibrillators
-    |> List.map (fun d -> d.Split[|';'|])
-    |> List.map (fun s -> Array.append s [|calc s.[4] s.[5]|])
-    |> List.sortBy (fun s -> float s.[6])
-    |> List.head
+    |> Array.map (fun d -> d.Split[|';'|])
+    |> Array.map (fun s -> Array.append s [|calc s.[4] s.[5]|])
+    |> Array.sortBy (fun s -> float s.[6])
+    |> Array.head
     |> Seq.item 1

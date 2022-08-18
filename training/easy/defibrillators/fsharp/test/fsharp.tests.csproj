@@ -26,4 +26,8 @@
     <ProjectReference Include="..\src\fsharp.fsproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Inputs\" />
+  </ItemGroup>
+
 </Project>
